@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+@font-face {
+    font-family: rubik;
+    src: url(assets/rubik.ttf);
+  }
+
+body, html {
+    padding: 0px;
+    height: 100%;
+    background-color: #040405;
+    color: white;
+    font-family: rubik;
+}
+
+.qp-border {
+    box-shadow: 0 0 1px 0px #ffffff;
+}
