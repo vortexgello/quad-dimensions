@@ -3,9 +3,9 @@
         Catalog
     </div>
     <div class="grid">
-        <div class="col-2" *ngFor="let product of catalog">
-            <div class="border-round-2xl qp-border h-10rem p-2 cursor-pointer" [routerLink]="'/pdfs/'+product.pdf">
-                <div class="bg-center bg-cover border-round-lg qp-border h-5rem" style="background: url('/assets/imgs/{{product.img}}');"></div>
+        <div class="col-3" *ngFor="let product of catalog">
+            <div class="border-round-2xl qp-border h-12rem p-2 cursor-pointer" [routerLink]="'/pdfs/'+product.pdf">
+                <div class="bg-center bg-cover border-round-lg qp-border h-8rem" style="background: url('assets/imgs/{{product.img}}');"></div>
                 <div class="py-3">
                     {{product.title}}
                 </div>
