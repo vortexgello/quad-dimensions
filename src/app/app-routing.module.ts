@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { ViewerComponent } from './viewer/viewer.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,9 @@ const routes: Routes = [
   },
   {
     path: 'pdfs/:id', component: ViewerComponent,
+  },
+  {
+    path: 'contact', component: ContactComponent,
   }
 ];
 @NgModule({

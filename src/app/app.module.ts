@@ -9,6 +9,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { ViewerComponent } from './viewer/viewer.component';
 import { ImageModule } from 'primeng/image';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ImageModule } from 'primeng/image';
     AppComponent,
     HomeComponent,
     CatalogComponent,
-    ViewerComponent
+    ViewerComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
