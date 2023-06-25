@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "gh": "ng build --base-href /quad-dimensions/ && copy docs\\index.html docs\\404.html",
-    "build": "ng build",
+    "build": "ng build && copy docs\\index.html docs\\404.html",
     "watch": "ng build --watch --configuration development"
   },
   "private": true,
