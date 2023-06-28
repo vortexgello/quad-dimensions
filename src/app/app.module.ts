@@ -8,9 +8,13 @@ import { HomeComponent } from './home/home.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { ViewerComponent } from './viewer/viewer.component';
-import { ImageModule } from 'primeng/image';
 import { ContactComponent } from './contact/contact.component';
-
+import { CatalogBuilderComponent } from './catalog-builder/catalog-builder.component';
+import { ButtonModule } from 'primeng/button';
+import { DialogModule } from 'primeng/dialog';
+import { InputTextModule } from 'primeng/inputtext';
+import { FormsModule } from '@angular/forms';
+import { InputSwitchModule } from 'primeng/inputswitch';
 
 @NgModule({
   declarations: [
@@ -18,14 +22,19 @@ import { ContactComponent } from './contact/contact.component';
     HomeComponent,
     CatalogComponent,
     ViewerComponent,
-    ContactComponent
+    ContactComponent,
+    CatalogBuilderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     PdfViewerModule,
-    ImageModule
+    ButtonModule,
+    DialogModule,
+    InputTextModule,
+    FormsModule,
+    InputSwitchModule
   ],
   providers: [],
   bootstrap: [AppComponent]

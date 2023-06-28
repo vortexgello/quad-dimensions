@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { ViewerComponent } from './viewer/viewer.component';
 import { ContactComponent } from './contact/contact.component';
+import { CatalogBuilderComponent } from './catalog-builder/catalog-builder.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,9 @@ const routes: Routes = [
   },
   {
     path: 'contact', component: ContactComponent,
+  },
+  {
+    path: 'builder', component: CatalogBuilderComponent
   }
 ];
 @NgModule({

@@ -1,12 +1,1 @@
-[
-    {
-        "title": "ZeissPrimostar 3",
-        "pdf": "primoster.pdf",
-        "img": "primostar.png"
-    },
-    {
-        "title": "Zeiss Stemi",
-        "pdf": "stemi.pdf",
-        "img": "stemi.png"
-    }
-]
+[{"title":"category1","products":[{"title":"prod title","image":"img link","pdf":"pdf name","types":null}]}]
