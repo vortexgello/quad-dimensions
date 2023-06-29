@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import * as catalog from './catalog.json'
+import * as catalog from '../../assets/catalog.json'
 
 @Component({
   selector: 'app-catalog',

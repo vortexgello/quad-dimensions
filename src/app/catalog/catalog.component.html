@@ -2,14 +2,21 @@
     <div class="text-5xl mb-4">
         Catalog
     </div>
-    <div class="grid">
-        <div class="col-12 border-round-2xl qp-border" *ngFor="let category of catalog">
-            <div class="text-2xl p-3">{{category.title}}</div>
-            <div class="grid">
-                <div class="col-3 border-round-2xl qp-border m-3" *ngFor="let product of category.products">
-                    <div class="cursor-pointer" [routerLink]="'/pdfs/'+product.pdf">
-                        <div class="bg-center bg-cover border-round-lg qp-border h-8rem" style="background: url('assets/imgs/{{product.img}}');"></div>
-                        <div class="text-base pt-3 p-2">{{product.title}}</div>
+    <div class="grid gap-3">
+        <div class="col-12 border-round-2xl qp-border px-3 py-2" *ngFor="let category of catalog">
+            <div class="text-2xl mb-3">{{category.title}}</div>
+            <div class="grid gap-2">
+                <div class="col-3 border-round-2xl qp-border" *ngFor="let product of category.products"
+                    [class]="product.pdf ? 'cursor-pointer': ''"
+                    [routerLink]="product.pdf ? '/pdfs/'+product.pdf : '/catalog'">
+                    <div class="bg-center bg-cover border-round-lg qp-border h-8rem"
+                        style="background: url('assets/imgs/{{product.img}}');"></div>
+                    <div class="text-base pt-3">{{product.title}}</div>
+                    <div *ngIf="product.types" class="mt-2">
+                        <button pButton class="p-2 mr-2 p-button-outlined text-white"
+                            [routerLink]="'/pdfs/'+product.types[0].pdf">{{product.types[0].title}}</button>
+                        <button pButton class="p-2 p-button-outlined text-white"
+                            [routerLink]="'/pdfs/'+product.types[1].pdf">{{product.types[1].title}}</button>
                     </div>
                 </div>
             </div>
