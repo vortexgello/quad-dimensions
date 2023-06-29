@@ -1,0 +1,54 @@
+[
+    {
+        "title": "Cameras Colour",
+        "products": [
+            {
+                "title": "MY TITLE ",
+                "image": "IMG",
+                "pdf": null,
+                "types": [
+                    {
+                        "title": "type 1",
+                        "pdf": "pdf 1"
+                    },
+                    {
+                        "title": "type 2",
+                        "pdf": "pdf 2"
+                    }
+                ]
+            },
+            {
+                "title": "fsdfs",
+                "image": "sdf",
+                "pdf": null,
+                "types": [
+                    {
+                        "title": "f4353sd",
+                        "pdf": "fdsfsd"
+                    },
+                    {
+                        "title": "43543dfds",
+                        "pdf": "dfsfdsf"
+                    }
+                ]
+            },
+            {
+                "title": "546",
+                "image": "dfgfdg",
+                "pdf": "ghgdfh",
+                "types": null
+            }
+        ]
+    },
+    {
+        "title": "esewre",
+        "products": [
+            {
+                "title": "45656",
+                "image": "dfdsf",
+                "pdf": "sdfdsf",
+                "types": null
+            }
+        ]
+    }
+]
