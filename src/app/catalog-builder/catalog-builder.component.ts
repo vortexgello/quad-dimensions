@@ -11,6 +11,8 @@ export class CatalogBuilderComponent {
   addCategoryPopup = false
   selectedCategoryIndex = 0
   addProductPopup = false
+  editProductPopup = false
+  selectedProductIndex = 0
 
   categoryTitle = ''
   product = {

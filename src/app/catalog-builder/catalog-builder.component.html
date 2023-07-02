@@ -13,7 +13,12 @@
                     <div class="flex align-items-center gap-2">
                         <div class="mr-auto">{{ product.title }}</div>
                         <div *ngIf="product.pdf">{{ product.pdf }}</div>
-                        <button pButton class="p-2" (click)="category.products.splice(j);updateLocalStorage()">Delete Product</button>
+                        <button pButton class="p-2" (click)="category.products.splice(j);updateLocalStorage()">
+                            <i class="pi pi-trash"></i>
+                        </button>
+                        <button pButton class="p-2" (click)="selectedCategoryIndex=i;selectedProductIndex=j;editProductPopup=true;">
+                            <i class="pi pi-pencil"></i>
+                        </button>
                     </div>
                    
                     <div *ngIf="product.types" class="mt-2">
@@ -50,6 +55,26 @@
         <button pButton class="ml-auto" style="height: 40px;" (click)="addProduct(selectedCategoryIndex)">Add</button>
     </div>
     
+</p-dialog>
+
+<p-dialog header="Edit Product in {{jsonData[selectedCategoryIndex]?.title}}" [(visible)]="editProductPopup" *ngIf="jsonData[selectedCategoryIndex].products[selectedProductIndex]" [modal]="true"  [style]="{width: '50vw'}">
+    <div class="flex flex-column gap-2 p-3">
+        <input pInputText placeholder="Product title" class="py-2 mb-2" [(ngModel)]="jsonData[selectedCategoryIndex].products[selectedProductIndex].title">
+        <input pInputText placeholder="Product image" class="py-2 mb-2" [(ngModel)]="jsonData[selectedCategoryIndex].products[selectedProductIndex].img">
+
+        <div *ngIf="jsonData[selectedCategoryIndex].products[selectedProductIndex].pdf">
+            <input pInputText placeholder="PDF name" class="py-2 mb-2" [(ngModel)]="jsonData[selectedCategoryIndex].products[selectedProductIndex].pdf">
+        </div>
+
+        <div class="flex flex-column" *ngIf="!jsonData[selectedCategoryIndex].products[selectedProductIndex].pdf">
+            <input pInputText placeholder="Type 1" class="py-2 mb-2" [(ngModel)]="jsonData[selectedCategoryIndex].products[selectedProductIndex].types[0].title">
+            <input pInputText placeholder="PDF1 name" class="py-2 mb-2" [(ngModel)]="jsonData[selectedCategoryIndex].products[selectedProductIndex].types[0].pdf">
+            <input pInputText placeholder="Type 2" class="py-2 mb-2" [(ngModel)]="jsonData[selectedCategoryIndex].products[selectedProductIndex].types[1].title">
+            <input pInputText placeholder="PDF2 name" class="py-2 mb-2" [(ngModel)]="jsonData[selectedCategoryIndex].products[selectedProductIndex].types[1].pdf">
+        </div>
+        <button pButton class="ml-auto" style="height: 40px;" (click)="updateLocalStorage();editProductPopup=false;">Save</button>
+    </div>
+     
 </p-dialog>
 
 <p-dialog header="New Category" [modal]="true" [(visible)]="addCategoryPopup" [style]="{width: '50vw'}">
