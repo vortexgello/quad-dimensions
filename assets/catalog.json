@@ -3,50 +3,307 @@
         "title": "Cameras Colour",
         "products": [
             {
-                "title": "MY TITLE ",
-                "image": "IMG",
+                "title": "Axiocam 105",
+                "image": "",
+                "pdf": "axiocam_105_color.pdf",
+                "types": null
+            },
+            {
+                "title": "Axiocam 305",
+                "image": "",
+                "pdf": "axiocam_305_color.pdf",
+                "types": null
+            },
+            {
+                "title": "Axiocam 705",
+                "image": "",
                 "pdf": null,
                 "types": [
                     {
-                        "title": "type 1",
-                        "pdf": "pdf 1"
+                        "title": "Colour",
+                        "pdf": "axiocam_705_color.pdf"
                     },
                     {
-                        "title": "type 2",
-                        "pdf": "pdf 2"
+                        "title": "Polarised",
+                        "pdf": "axiocam_705_pol.pdf"
                     }
                 ]
             },
             {
-                "title": "fsdfs",
-                "image": "sdf",
-                "pdf": null,
-                "types": [
-                    {
-                        "title": "f4353sd",
-                        "pdf": "fdsfsd"
-                    },
-                    {
-                        "title": "43543dfds",
-                        "pdf": "dfsfdsf"
-                    }
-                ]
+                "title": "Axiocam 712",
+                "image": "",
+                "pdf": "axiocam_712_color.pdf",
+                "types": null
             },
             {
-                "title": "546",
-                "image": "dfgfdg",
-                "pdf": "ghgdfh",
+                "title": "Axiocam 807",
+                "image": "",
+                "pdf": "axiocam_807_color.pdf",
+                "types": null
+            },
+            {
+                "title": "Axiocam 820",
+                "image": "",
+                "pdf": "axiocam_820_color.pdf",
+                "types": null
+            },
+            {
+                "title": "Axiocam 208",
+                "image": "",
+                "pdf": "axiocam_208_color.pdf",
                 "types": null
             }
         ]
     },
     {
-        "title": "esewre",
+        "title": "Cameras Mono",
         "products": [
             {
-                "title": "45656",
-                "image": "dfdsf",
-                "pdf": "sdfdsf",
+                "title": "Axiocam 202",
+                "image": "",
+                "pdf": "axiocam_202_mono.pdf",
+                "types": null
+            },
+            {
+                "title": "Axiocam 305",
+                "image": "",
+                "pdf": "axiocam_305_mono.pdf",
+                "types": null
+            },
+            {
+                "title": "Axiocam 503",
+                "image": "",
+                "pdf": "axiocam_503_mono.pdf",
+                "types": null
+            },
+            {
+                "title": "Axiocam 506",
+                "image": "",
+                "pdf": "axiocam_506_mono.pdf",
+                "types": null
+            },
+            {
+                "title": "Axiocam 702",
+                "image": "",
+                "pdf": "axiocam_702_mono.pdf",
+                "types": null
+            },
+            {
+                "title": "Axiocam 705",
+                "image": "",
+                "pdf": "axiocam_705_mono.pdf",
+                "types": null
+            },
+            {
+                "title": "Axiocam 807",
+                "image": "",
+                "pdf": "axiocam_807_mono.pdf",
+                "types": null
+            },
+            {
+                "title": "Axiocam 820",
+                "image": "",
+                "pdf": "axiocam_820_mono.pdf",
+                "types": null
+            }
+        ]
+    },
+    {
+        "title": "Inverted",
+        "products": [
+            {
+                "title": "Axio",
+                "image": "",
+                "pdf": null,
+                "types": [
+                    {
+                        "title": "Bio",
+                        "pdf": "axio_observer_bio.pdf"
+                    },
+                    {
+                        "title": "Mat",
+                        "pdf": "axio_observer_mat.pdf"
+                    }
+                ]
+            },
+            {
+                "title": "Axio Observer",
+                "image": "",
+                "pdf": "axio_observer_bio.pdf",
+                "types": null
+            },
+            {
+                "title": "Axio Vert.A1",
+                "image": "",
+                "pdf": null,
+                "types": [
+                    {
+                        "title": "Bio",
+                        "pdf": "axio_vert_a1_bio.pdf"
+                    },
+                    {
+                        "title": "Mat",
+                        "pdf": "axio_vert_a1_mat.pdf"
+                    }
+                ]
+            },
+            {
+                "title": "Axiovert",
+                "image": "",
+                "pdf": null,
+                "types": [
+                    {
+                        "title": "Bio",
+                        "pdf": "axio_vert_bio.pdf"
+                    },
+                    {
+                        "title": "Mat",
+                        "pdf": "axio_vert_mat.pdf"
+                    }
+                ]
+            },
+            {
+                "title": "Axiovert 5",
+                "image": "",
+                "pdf": "axiovert_5.pdf",
+                "types": null
+            },
+            {
+                "title": "Axiovert 7",
+                "image": "",
+                "pdf": "axiovert_7_mat.pdf",
+                "types": null
+            },
+            {
+                "title": "Primovert",
+                "image": "",
+                "pdf": "primovert_flyer.pdf",
+                "types": null
+            }
+        ]
+    },
+    {
+        "title": "LSM",
+        "products": [
+            {
+                "title": "900",
+                "image": "",
+                "pdf": "lsm_900.pdf",
+                "types": null
+            },
+            {
+                "title": "980",
+                "image": "",
+                "pdf": "lsm_980.pdf",
+                "types": null
+            },
+            {
+                "title": "980 Airscan 2",
+                "image": "",
+                "pdf": "lsm_980_airyscan_2_flyer.pdf",
+                "types": null
+            },
+            {
+                "title": "Elyra 7",
+                "image": "",
+                "pdf": "elyra_7.pdf",
+                "types": null
+            }
+        ]
+    },
+    {
+        "title": "Stereo",
+        "products": [
+            {
+                "title": "Axio Zoom",
+                "image": "",
+                "pdf": null,
+                "types": [
+                    {
+                        "title": "Bio",
+                        "pdf": "axio_zoom_v16_bio.pdf"
+                    },
+                    {
+                        "title": "Mat",
+                        "pdf": "axio_zoom_v16_mat.pdf"
+                    }
+                ]
+            },
+            {
+                "title": "Stemi 305",
+                "image": "",
+                "pdf": "stemi_305.pdf",
+                "types": null
+            },
+            {
+                "title": "SteREO Discovery V8",
+                "image": "",
+                "pdf": "stereo_discovery_v8.pdf",
+                "types": null
+            },
+            {
+                "title": "SteREO Discovery V12",
+                "image": "",
+                "pdf": "stereo_discovery_v12.pdf",
+                "types": null
+            },
+            {
+                "title": "SteREO Discovery V20",
+                "image": "",
+                "pdf": "stereo_discovery_v20.pdf",
+                "types": null
+            },
+            {
+                "title": "Stemi 508",
+                "image": "",
+                "pdf": "stemi_508.pdf",
+                "types": null
+            }
+        ]
+    },
+    {
+        "title": "Upright",
+        "products": [
+            {
+                "title": "Axio Imager",
+                "image": "",
+                "pdf": null,
+                "types": [
+                    {
+                        "title": "Imager 2",
+                        "pdf": "axio_imager_2.pdf"
+                    },
+                    {
+                        "title": "Vario",
+                        "pdf": "axio_imager_vario.pdf"
+                    }
+                ]
+            },
+            {
+                "title": "Axiolab 5",
+                "image": "",
+                "pdf": null,
+                "types": [
+                    {
+                        "title": "Bio",
+                        "pdf": "axiolab_5_bio.pdf"
+                    },
+                    {
+                        "title": "Mat",
+                        "pdf": "axiolab_5_mat.pdf"
+                    }
+                ]
+            },
+            {
+                "title": "Primostar 3",
+                "image": "",
+                "pdf": "primostar_3_bio.pdf",
+                "types": null
+            },
+            {
+                "title": "Axioscope 5",
+                "image": "",
+                "pdf": "axioscope_5_bio.pdf",
                 "types": null
             }
         ]
