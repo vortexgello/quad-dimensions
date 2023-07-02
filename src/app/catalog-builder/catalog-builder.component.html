@@ -62,11 +62,11 @@
         <input pInputText placeholder="Product title" class="py-2 mb-2" [(ngModel)]="jsonData[selectedCategoryIndex].products[selectedProductIndex].title">
         <input pInputText placeholder="Product image" class="py-2 mb-2" [(ngModel)]="jsonData[selectedCategoryIndex].products[selectedProductIndex].img">
 
-        <div *ngIf="jsonData[selectedCategoryIndex].products[selectedProductIndex].pdf">
+        <div *ngIf="!jsonData[selectedCategoryIndex].products[selectedProductIndex].types">
             <input pInputText placeholder="PDF name" class="py-2 mb-2" [(ngModel)]="jsonData[selectedCategoryIndex].products[selectedProductIndex].pdf">
         </div>
 
-        <div class="flex flex-column" *ngIf="!jsonData[selectedCategoryIndex].products[selectedProductIndex].pdf">
+        <div class="flex flex-column" *ngIf="jsonData[selectedCategoryIndex].products[selectedProductIndex].types">
             <input pInputText placeholder="Type 1" class="py-2 mb-2" [(ngModel)]="jsonData[selectedCategoryIndex].products[selectedProductIndex].types[0].title">
             <input pInputText placeholder="PDF1 name" class="py-2 mb-2" [(ngModel)]="jsonData[selectedCategoryIndex].products[selectedProductIndex].types[0].pdf">
             <input pInputText placeholder="Type 2" class="py-2 mb-2" [(ngModel)]="jsonData[selectedCategoryIndex].products[selectedProductIndex].types[1].title">
