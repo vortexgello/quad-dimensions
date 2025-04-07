@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quad Dimensions - Catalog</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar without upload -->
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>Quad Dimensions</h1>
+        <p class="product-count">Loading...</p>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Catalog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </aside>
+
+    <!-- Main product display -->
+    <main class="main-content">
+      <h2>Catalog</h2>
+      <div id="catalog-sections"></div>
+    </main>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("products.json")
+        .then(res => res.json())
+        .then(products => {
+          const container = document.getElementById('catalog-sections');
+          const grouped = {};
+          products.forEach(p => {
+            if (!grouped[p.category]) grouped[p.category] = [];
+            grouped[p.category].push(p);
+          });
+
+          for (const [category, items] of Object.entries(grouped)) {
+            const section = document.createElement('section');
+            section.className = 'catalog-section';
+            section.innerHTML = '<h3>' + category + '</h3>';
+
+            const grid = document.createElement('div');
+            grid.className = 'product-grid';
+
+            items.forEach(product => {
+              const card = document.createElement('div');
+              card.className = 'product-card';
+              card.innerHTML = `
+                <img src="${product.thumbnail}" style="width:100%;border-radius:4px;margin-bottom:10px;">
+                <h4>${product.name}</h4>
+                <a href="${product.pdf}" target="_blank">View PDF</a>
+              `;
+              grid.appendChild(card);
+            });
+
+            section.appendChild(grid);
+            container.appendChild(section);
+          }
+
+          document.querySelector('.product-count').textContent = products.length + " products";
+        });
+    });
+  </script>
+</body>
+</html>

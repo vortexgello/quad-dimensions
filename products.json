@@ -1,0 +1,280 @@
+[
+  {
+    "name": "Axio Zoom V16 Bio",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/axio-zoom-v16_bio.jpg",
+    "pdf":"/static/pdfs/axio_zoom_v16_bio.pdf"
+  },
+  {
+    "name": "Axio Zoom V16 Mat",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/axio-zoom-v16_mat.jpg",
+    "pdf":"/static/pdfs/axio_zoom_v16_mat.pdf"
+  },
+  {
+    "name": "Axiocam 807 Mono",
+    "category": "Cameras",
+    "thumbnail": "/static/thumbnails/axiocam_807_mono.jpg",
+    "pdf":"/static/pdfs/axiocam_807_mono.pdf"
+    
+  },
+  {
+    "name": "Axiocam 820 Color",
+    "category": "Cameras",
+    "thumbnail": "/static/thumbnails/axiocam_820_color.jpg",
+    "pdf":"/static/pdfs/axiocam_820_color.pdf"
+  },
+  {
+    "name": "Axiocam 105 Color",
+    "category": "Cameras",
+    "pdf": "/static/pdfs/axiocam_105_color.pdf",
+    "thumbnail": "/static/thumbnails/axiocam-105-color_stage.jpg"
+  },
+  {
+    "name": "Axiocam 202 Mono",
+    "category": "Cameras",
+    "thumbnail": "/static/thumbnails/axiocam_202_mono.jpg",
+    "pdf": "/static/pdfs/axiocam_202_mono.pdf"
+  },
+  {
+    "name": "Axiocam 208 Color",
+    "category": "Cameras",
+    "thumbnail": "/static/thumbnails/axiocam_208_color.jpg",
+    "pdf": "/static/pdfs/axiocam_208_color.pdf"
+  },
+  {
+    "name": "Axiocam 305 Color",
+    "category": "Cameras",
+    "thumbnail": "/static/thumbnails/axiocam_305_color.jpg",
+    "pdf": "/static/pdfs/axiocam_305_color.pdf"
+  },
+  {
+    "name": "Axiocam 305 Mono",
+    "category": "Cameras",
+    "thumbnail": "/static/thumbnails/axiocam_305_mono.jpg",
+    "pdf": "/static/pdfs/axiocam_305_mono.pdf"
+  },
+  {
+    "name": "Axiocam 503 Mono",
+    "category": "Cameras",
+    "thumbnail": "/static/thumbnails/axiocam_503_mono.jpg",
+    "pdf": "/static/pdfs/axiocam_503_mono.pdf"
+  },
+  {
+    "name": "Axiocam 506 Mono",
+    "category": "Cameras",
+    "thumbnail": "/static/thumbnails/axiocam_506_mono.jpg",
+    "pdf": "/static/pdfs/axiocam_506_mono.pdf"
+  },
+  {
+    "name": "Axiocam 702 Mono",
+    "category": "Cameras",
+    "thumbnail": "/static/thumbnails/axiocam_702_mono.jpg",
+    "pdf": "/static/pdfs/axiocam_702_mono.pdf"
+  },
+  {
+    "name": "Axiocam 705 Color",
+    "category": "Cameras",
+    "thumbnail": "/static/thumbnails/axiocam_705_color.jpg",
+    "pdf": "/static/pdfs/axiocam_705_color.pdf"
+  },
+  {
+    "name": "Axiocam 705 Mono",
+    "category": "Cameras",
+    "thumbnail": "/static/thumbnails/axiocam_705_mono.jpg",
+    "pdf": "/static/pdfs/axiocam_705_mono.pdf"
+  },
+  {
+    "name": "Axiocam 705 Pol",
+    "category": "Cameras",
+    "thumbnail": "/static/thumbnails/axiocam_705_pol.jpg",
+    "pdf": "/static/pdfs/axiocam_705_pol.pdf"
+  },
+  {
+    "name": "Axiocam 712 Color",
+    "category": "Cameras",
+    "thumbnail": "/static/thumbnails/axiocam_712_color.jpg",
+    "pdf": "/static/pdfs/axiocam_712_color.pdf"
+  },
+  {
+    "name": "Axiocam 807 Color",
+    "category": "Cameras",
+    "thumbnail": "/static/thumbnails/axiocam_807_color.jpg",
+    "pdf": "/static/pdfs/axiocam_807_color.pdf"
+  },
+  {
+    "name": "Axiocam 807 Mono",
+    "category": "Cameras",
+    "thumbnail": "/static/thumbnails/axiocam_807_mono.jpg",
+    "pdf": "/static/pdfs/axiocam_807_mono.pdf"
+  },
+  {
+    "name": "Axiocam 820 Color",
+    "category": "Cameras",
+    "thumbnail": "/static/thumbnails/axiocam_820_color.jpg",
+    "pdf": "/static/pdfs/axiocam_820_color.pdf"
+  },
+  {
+    "name": "Axiocam 820 Mono",
+    "category": "Cameras",
+    "thumbnail": "/static/thumbnails/axiocam_820_mono.jpg",
+    "pdf": "/static/pdfs/axiocam_820_mono.pdf"
+  },
+  {
+    "name": "Axiolab 5 Bio",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/axiolab_5_bio.jpg",
+    "pdf": "/static/pdfs/axiolab_5_bio.pdf"
+  },
+  {
+    "name": "Axiolab 5 Mat",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/axiolab_5_mat.jpg",
+    "pdf": "/static/pdfs/axiolab_5_mat.pdf"
+  },
+  {
+    "name": "Axioscope 5 Bio",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/axioscope_5_bio.jpg",
+    "pdf": "/static/pdfs/axioscope_5_bio.pdf"
+  },
+  {
+    "name": "Axiovert 5",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/axiovert_5.jpg",
+    "pdf": "/static/pdfs/axiovert_5.pdf"
+  },
+  {
+    "name": "Axiovert 7 Mat",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/axiovert_7_mat.jpg",
+    "pdf": "/static/pdfs/axiovert_7_mat.pdf"
+  },
+  {
+    "name": "Axio Imager 2",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/axio_imager_2.jpg",
+    "pdf": "/static/pdfs/axio_imager_2.pdf"
+  },
+  {
+    "name": "Axio Imager Vario",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/axio_imager_vario.jpg",
+    "pdf": "/static/pdfs/axio_imager_vario.pdf"
+  },
+  {
+    "name": "Axio Observer Bio",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/axio_observer_bio.jpg",
+    "pdf": "/static/pdfs/axio_observer_bio.pdf"
+  },
+  {
+    "name": "Axio Observer Mat",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/axio_observer_mat.jpg",
+    "pdf": "/static/pdfs/axio_observer_mat.pdf"
+  },
+  {
+    "name": "Axio Vert A1 Bio",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/axio_vert_a1_bio.jpg",
+    "pdf": "/static/pdfs/axio_vert_a1_bio.pdf"
+  },
+  {
+    "name": "Axio Vert A1 Mat",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/axio_vert_a1_mat.jpg",
+    "pdf": "/static/pdfs/axio_vert_a1_mat.pdf"
+  },
+  {
+    "name": "Axio Vert Bio",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/axio_vert_bio.jpg",
+    "pdf": "/static/pdfs/axio_vert_bio.pdf"
+  },
+  {
+    "name": "Axio Vert Mat",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/axio_vert_mat.jpg",
+    "pdf": "/static/pdfs/axio_vert_mat.pdf"
+  },
+  {
+    "name": "Axio Zoom V16 Bio",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/axio-zoom-v16_bio.jpg",
+    "pdf": "/static/pdfs/axio_zoom_v16_bio.pdf"
+
+  },
+  {
+    "name": "Axio Zoom V16 Mat",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/axio-zoom-v16_mat.jpg",
+    "pdf": "/static/pdfs/axio_zoom_v16_mat.pdf"
+  },
+  {
+    "name": "Elyra 7",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/elyra_7.jpg",
+    "pdf": "/static/pdfs/elyra_7.pdf"
+  },
+  {
+    "name": "LSM 900",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/lsm_900.jpg",
+    "pdf": "/static/pdfs/lsm_900.pdf"
+  },
+  {
+    "name": "LSM 980",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/lsm_900.jpg",
+    "pdf": "/static/pdfs/lsm_980.pdf"
+  },
+  {
+    "name": "LSM 980 Airyscan 2 Flyer",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/lsm_980_airyscan_2_flyer.jpg",
+    "pdf": "/static/pdfs/lsm_980_airyscan_2_flyer.pdf"
+  },
+  {
+    "name": "Primostar 3 Bio",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/primostar_3_bio.jpg",
+    "pdf": "/static/pdfs/primostar_3_bio.pdf"
+  },
+  {
+    "name": "Primovert Flyer",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/primovert_flyer.jpg",
+    "pdf": "/static/pdfs/primovert_flyer.pdf"
+  },
+  {
+    "name": "Stemi 305",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/stemi_305.jpg",
+    "pdf": "/static/pdfs/stemi_305.pdf"
+  },
+  {
+    "name": "Stemi 508",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/stemi_508.jpg",
+    "pdf": "/static/pdfs/stemi_508.pdf"
+  },
+  {
+    "name": "Stereo Discovery V12",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/stereo_discovery_v12.jpg",
+    "pdf": "/static/pdfs/stereo_discovery_v12.pdf"
+  },
+  {
+    "name": "Stereo Discovery V20",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/stereo_discovery_v20.jpg",
+    "pdf": "/static/pdfs/stereo_discovery_v20.pdf"
+  },
+  {
+    "name": "Stereo Discovery V8",
+    "category": "Microscopes",
+    "thumbnail": "/static/thumbnails/stereo_discovery_v8.jpg",
+    "pdf": "/static/pdfs/stereo_discovery_v8.pdf"
+  }
+]
