@@ -282,3 +282,35 @@ body.light-mode .toggle-buttons button {
 body.light-mode .toggle-buttons button:hover {
   background: #ccc;
 }
+
+
+/* Clean look for toggle + theme buttons */
+.toggle-buttons button {
+  background: transparent;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-buttons button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.toggle-buttons img {
+  width: 24px;
+  height: 24px;
+}
+
+#themeToggle i {
+  font-size: 22px;
+  color: #ffcc00;
+}
+
+body.light-mode #themeToggle i {
+  color: #222;
+}

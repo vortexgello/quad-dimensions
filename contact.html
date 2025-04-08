@@ -1,19 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Contact - Quad Dimensions</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <div class="container">
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
       <div class="brand">
         <h1>Quad Dimensions</h1>
+        <p class="product-count"></p>
+        <div class="toggle-buttons">
+          <button id="toggleSidebar" title="Toggle Sidebar">
+            <img id="toggleIcon" src="static/icons/collapse.png" alt="Toggle Sidebar" />
+          </button>
+          <button id="themeToggle" title="Toggle Theme">
+            <i class="fas fa-moon" id="themeIcon"></i>
+          </button>
+        </div>
       </div>
       <nav class="nav-links">
         <a href="index.html">Catalog</a>
         <a href="contact.html" class="active">Contact</a>
+        <a href="applications.html">Applications</a>
       </nav>
     </aside>
 
@@ -25,5 +37,29 @@
       <p>GST: 36AAAFQ8707E1ZB</p>
     </main>
   </div>
+
+  <script>
+    // Sidebar toggle
+    document.getElementById('toggleSidebar').addEventListener('click', () => {
+      const sidebar = document.getElementById('sidebar');
+      const isCollapsed = sidebar.classList.toggle('collapsed');
+      document.getElementById('toggleIcon').src = isCollapsed ? 'static/icons/expand.png' : 'static/icons/collapse.png';
+    });
+
+    // Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    document.body.classList.toggle('light-mode', currentTheme === 'light');
+    themeIcon.classList.toggle('fa-sun', currentTheme === 'light');
+    themeIcon.classList.toggle('fa-moon', currentTheme !== 'light');
+
+    themeToggle.addEventListener('click', () => {
+      const isLight = document.body.classList.toggle('light-mode');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      themeIcon.classList.toggle('fa-sun', isLight);
+      themeIcon.classList.toggle('fa-moon', !isLight);
+    });
+  </script>
 </body>
 </html>

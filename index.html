@@ -25,6 +25,7 @@
       <nav class="nav-links">
         <a href="index.html" class="active">Catalog</a>
         <a href="contact.html">Contact</a>
+        <a href="applications.html">Applications</a>
       </nav>
     </aside>
 
@@ -112,7 +113,7 @@
           card.innerHTML = `
             <img src="${product.thumbnail}" style="width:100%;border-radius:4px;margin-bottom:10px;">
             <h4>${product.name}</h4>
-            <a href="${product.pdf}" target="_blank">View PDF</a>
+            <a href="${product.pdf}" target="_blank">See More</a>
           `;
           renderTags(card, tags);
           grid.appendChild(card);

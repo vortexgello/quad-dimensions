@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Applications & Tips - Quad Dimensions</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .tips-img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .catalog-section ul {
+      list-style: disc;
+      margin-left: 20px;
+    }
+    .catalog-section p {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <h1>Quad Dimensions</h1>
+        <p class="product-count"></p>
+        <div class="toggle-buttons">
+          <button id="toggleSidebar" title="Toggle Sidebar">
+            <img id="toggleIcon" src="static/icons/collapse.png" alt="Toggle Sidebar" />
+          </button>
+          <button id="themeToggle" title="Toggle Theme">
+            <i class="fas fa-moon" id="themeIcon"></i>
+          </button>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Catalog</a>
+        <a href="contact.html">Contact</a>
+        <a href="applications.html" class="active">Applications</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <h2>Application Notes & Technical Insights</h2>
+
+      <section class="catalog-section">
+        <h3>📘 Fluorescence Imaging with Axiocam 807 Mono</h3>
+        <p>The Axiocam 807 Mono camera provides exceptional sensitivity for low-light fluorescence applications. To maximize performance:</p>
+        <ul>
+          <li>Use low excitation intensity to reduce phototoxic effects.</li>
+          <li>Activate the cooling system to reduce dark current noise during long exposures.</li>
+          <li>Apply flat-field correction in software to eliminate uneven illumination artifacts.</li>
+        </ul>
+        <img src="static/thumbnails/axiocam_807_color.jpg" alt="Axiocam 807 Mono" class="tips-img" />
+      </section>
+
+      <section class="catalog-section">
+        <h3>🔍 Image Stitching for Large Field of View</h3>
+        <p>For biological and materials research, stitching allows you to observe wide samples with full detail. Recommendations include:</p>
+        <ul>
+          <li>Use a motorized stage for precise tile acquisition.</li>
+          <li>Maintain 10–15% overlap between adjacent fields.</li>
+          <li>Employ ZEN software for stitching with shading correction enabled.</li>
+        </ul>
+        <img src="static/thumbnails/zen.jpg" alt="Stitched Sample View" class="tips-img" />
+      </section>
+
+      <section class="catalog-section">
+        <h3>🔬 Live Cell Imaging Guidelines</h3>
+        <p>Live cell workflows demand environmental control and sensitivity to prevent cell stress:</p>
+        <ul>
+          <li>Use incubation chambers to maintain 37°C, 5% CO₂, and humidity.</li>
+          <li>Utilize minimal exposure times, even in time-lapse sequences.</li>
+          <li>Optimize autofocusing methods to reduce sample disturbance.</li>
+        </ul>
+        <img src="static/thumbnails/LiveCell.jpg" alt="Live Cell Chamber" class="tips-img" />
+      </section>
+
+      <section class="catalog-section">
+        <h3>⚙️ Technical Maintenance & Calibration</h3>
+        <p>Ensure consistent, high-quality imaging by performing regular maintenance:</p>
+        <ul>
+          <li>Clean objectives with ZEISS-approved lens cleaning kits.</li>
+          <li>Calibrate each objective using a micrometer slide for accurate scaling.</li>
+          <li>Keep optics dry and dust-free by using silica gel in storage cabinets.</li>
+        </ul>
+      </section>
+
+      <section class="catalog-section">
+        <h3>🧠 Troubleshooting & Optimization</h3>
+        <p>If imaging performance is degraded:</p>
+        <ul>
+          <li><strong>Noise Issues:</strong> Reduce gain, increase averaging, or use longer exposure with cooling.</li>
+          <li><strong>Vignetting:</strong> Ensure proper condenser and field diaphragm alignment.</li>
+          <li><strong>Lag in Live Preview:</strong> Close background apps, check USB bandwidth, and reduce preview resolution.</li>
+        </ul>
+         <!--<img src="static/thumbnails/Troubleshooting.jpg" alt="Microscope Tips" class="tips-img" /> -->
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('toggleSidebar').addEventListener('click', () => {
+      const sidebar = document.getElementById('sidebar');
+      const isCollapsed = sidebar.classList.toggle('collapsed');
+      document.getElementById('toggleIcon').src = isCollapsed ? 'static/icons/expand.png' : 'static/icons/collapse.png';
+    });
+
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    document.body.classList.toggle('light-mode', currentTheme === 'light');
+    themeIcon.classList.toggle('fa-sun', currentTheme === 'light');
+    themeIcon.classList.toggle('fa-moon', currentTheme !== 'light');
+
+    themeToggle.addEventListener('click', () => {
+      const isLight = document.body.classList.toggle('light-mode');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      themeIcon.classList.toggle('fa-sun', isLight);
+      themeIcon.classList.toggle('fa-moon', !isLight);
+    });
+  </script>
+</body>
+</html>
