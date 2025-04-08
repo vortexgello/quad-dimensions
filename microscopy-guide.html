@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Microscopy Guide - Quad Dimensions</title>
+  <meta name="description" content="Comprehensive guide to choosing and using microscopes for biological, materials, and advanced imaging applications.">
+  <meta name="keywords" content="microscope types, microscope applications, microscopy techniques, ZEISS, Quad Dimensions, imaging guide">
+  <meta name="author" content="Quad Dimensions">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .catalog-section ul { list-style: disc; margin-left: 20px; }
+    .catalog-section p { line-height: 1.6; }
+    .tips-img { width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0; }
+    .catalog-section h3 { margin-top: 1.5em; }
+  </style>
+  <style>
+    .catalog-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .catalog-section li {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #444;
+      padding-bottom: 1rem;
+    }
+  
+    .catalog-section img.tips-img {
+      width: 280px;
+      max-width: 100%;
+      border-radius: 10px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+  
+    .catalog-section li > strong {
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+  
+    .catalog-section em {
+      display: block;
+      margin-top: 0.5rem;
+      color: #aaa;
+    }
+  
+    @media (max-width: 768px) {
+      .catalog-section li {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <h1>Quad Dimensions</h1>
+        <p class="product-count"></p>
+        <div class="toggle-buttons">
+          <button id="toggleSidebar" title="Toggle Sidebar">
+            <img id="toggleIcon" src="static/icons/collapse.png" alt="Toggle Sidebar" />
+          </button>
+          <button id="themeToggle" title="Toggle Theme">
+            <i class="fas fa-moon" id="themeIcon"></i>
+          </button>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Catalog</a>
+        <a href="contact.html">Contact</a>
+        <a href="microscopy-guide.html" class="active">Microscopy Guide</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <h2>Microscopy Guide</h2>
+
+      <section class="catalog-section">
+        <h2>1. Choosing Your Microscope</h2>
+        <p>Selecting the right microscope depends on what you want to observe. Here's a breakdown to help you pick the perfect tool for your application, along with some example models from ZEISS.</p>
+          <li>
+            <img src="/static/thumbnails/primostar_3_bio.jpg" alt="Biological Microscope" class="tips-img" />
+            <strong>🔬 Biological Microscope:</strong> Ideal for live cell imaging, tissue sections, bacteria, and blood samples. <br />
+            These microscopes use transmitted light and high magnification to reveal structures inside thin, transparent samples. <br />
+          
+            Often paired with stains or contrast techniques.
+            <em>Example ZEISS models: Axio Lab.A1, Primostar 3</em>
+          </li>
+          
+          
+          <li>
+            <img src="static/thumbnails/axiovert_5.jpg" alt="Fluorescence Microscope" class="tips-img" />
+            <strong>✨ Fluorescence Microscope:</strong> Ideal for targeted molecular labeling, protein tracking, and immunofluorescence.<br />
+            Uses high-intensity light to excite fluorescent dyes or proteins in a sample. Great for visualizing specific structures like DNA or organelles.<br />
+            <em>Example ZEISS models: Axio Imager 2, Axio Observer</em>
+          </li>
+
+          
+          <li>
+            <img src="static/thumbnails/axio_vert_mat.jpg" alt="Metallurgical Microscope" class="tips-img" />
+            <strong>🛠️ Metallurgical Microscope:</strong> Ideal for surface inspection, metallurgy, and semiconductor analysis.<br />
+            Designed for reflected light microscopy on opaque materials like metals and composites.<br />
+            <em>Example ZEISS models: Axio Scope.A1 MET, Axiovert 5 MAT</em>
+          </li>
+          <li>
+            <img src="static/thumbnails/stemi_305.jpg" alt="Stereomicroscope" class="tips-img" />
+            <strong>🧠 Stereomicroscope (Dissecting Microscope):</strong> Ideal for 3D observation, electronics inspection, and dissection.<br />
+            Offers a wider field of view and depth perception at lower magnification.<br />
+            <em>Example ZEISS models: Stemi 305, Stemi 508</em>
+          </li>
+          <li>
+            <img src="/static/thumbnails/Smartzoom_5.jpg" alt="Digital Microscope" class="tips-img" />
+            <strong>📷 Digital Microscope:</strong> Ideal for documentation, remote collaboration, and training environments.<br />
+            Equipped with cameras and software for measurement and image sharing.
+            <em>Example ZEISS models: Smartzoom 5, Axiocam-equipped systems</em>
+          </li>
+          <li>
+            <img src="/static/thumbnails/sigma.jpg" alt="Electron Microscope" class="tips-img" />
+            <strong>⚛️ Electron Microscope (SEM/TEM):</strong> Ideal for nanostructures, viruses, and ultra-high-resolution imaging.<br />
+            Uses electron beams for incredibly detailed views of sample surfaces or internal structures.<br />
+            <em>Example ZEISS models: Sigma 300 (SEM), Libra 200 (TEM)</em>
+          </li>
+        </ul>
+      </section>
+
+      <section class="catalog-section">
+        <h2>2. Application Notes & Technical Tips</h2>
+
+        <h3>Fluorescence Imaging with Axiocam 807 Mono</h3>
+        <ul>
+          <li>Use low excitation to reduce phototoxicity</li>
+          <li>Use cooling to minimize noise</li>
+          <li>Use flat-field correction for illumination uniformity</li>
+        </ul>
+
+        <h3>Image Stitching</h3>
+        <ul>
+          <li>Use motorized stage and 10-15% field overlap</li>
+          <li>Use software stitching with shading correction</li>
+        </ul>
+
+        <h3>Live Cell Imaging</h3>
+        <ul>
+          <li>Maintain 37°C, 5% CO₂</li>
+          <li>Minimize exposure during time-lapse</li>
+        </ul>
+
+        <h3>Maintenance & Calibration</h3>
+        <ul>
+          <li>Clean optics with proper kits</li>
+          <li>Calibrate using micrometer slide</li>
+        </ul>
+
+        <h3>Troubleshooting</h3>
+        <ul>
+          <li><strong>Noise:</strong> Lower gain or cool sensor</li>
+          <li><strong>Lag:</strong> Close apps or reduce resolution</li>
+        </ul>
+      </section>
+
+      <section class="catalog-section">
+        <h2>3. Advanced Microscopy Techniques</h2>
+
+        <h3>Phase Contrast</h3>
+        <p>Enhances contrast in transparent specimens without staining. Best for live cells.</p>
+
+        <h3>DIC (Nomarski)</h3>
+        <p>Provides pseudo-3D relief images. Useful for detailed organelle visualization.</p>
+
+        <h3>Darkfield</h3>
+        <p>Highlights edges and particles in thin, transparent specimens via scattered light.</p>
+
+        <h3>Multiphoton</h3>
+        <p>Infrared-based deep tissue fluorescence with reduced phototoxicity.</p>
+
+        <h3>SPM (AFM / STM)</h3>
+        <p>Surface scanning for nanotechnology and materials research.</p>
+
+        <h3>Portable / Handheld</h3>
+        <p>Forensics, field inspection, or rapid low-mag documentation.</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('toggleSidebar').addEventListener('click', () => {
+      const sidebar = document.getElementById('sidebar');
+      const isCollapsed = sidebar.classList.toggle('collapsed');
+      document.getElementById('toggleIcon').src = isCollapsed ? 'static/icons/expand.png' : 'static/icons/collapse.png';
+    });
+
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    document.body.classList.toggle('light-mode', currentTheme === 'light');
+    themeIcon.classList.toggle('fa-sun', currentTheme === 'light');
+    themeIcon.classList.toggle('fa-moon', currentTheme !== 'light');
+
+    themeToggle.addEventListener('click', () => {
+      const isLight = document.body.classList.toggle('light-mode');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      themeIcon.classList.toggle('fa-sun', isLight);
+      themeIcon.classList.toggle('fa-moon', !isLight);
+    });
+  </script>
+</body>
+</html>
