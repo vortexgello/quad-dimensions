@@ -9,17 +9,18 @@
 </head>
 <body>
   <div class="container">
-    <!-- Sidebar with collapse button -->
     <aside class="sidebar" id="sidebar">
       <div class="brand">
         <h1>Quad Dimensions</h1>
         <p class="product-count">Loading...</p>
-        <button id="toggleSidebar" style="margin-top:10px;padding:5px 10px;">
-          <img id="toggleIcon" src="static/icons/collapse.svg" alt="Toggle Sidebar" style="width: 30px; height: 30px;" />
-        </button>
-        <button id="themeToggle" style="margin-top:10px;padding:5px 10px;width: 30px; height: 30px;">
-          <i class="fas fa-moon" id="themeIcon"></i>
-        </button>
+        <div class="toggle-buttons">
+          <button id="toggleSidebar" title="Toggle Sidebar">
+            <img id="toggleIcon" src="static/icons/collapse.png" alt="Toggle Sidebar" />
+          </button>
+          <button id="themeToggle" title="Toggle Theme">
+            <i class="fas fa-moon" id="themeIcon"></i>
+          </button>
+        </div>
       </div>
       <nav class="nav-links">
         <a href="index.html" class="active">Catalog</a>
@@ -27,23 +28,64 @@
       </nav>
     </aside>
 
-    <!-- Main product display -->
     <main class="main-content">
       <h2>Catalog</h2>
 
       <div style="margin-bottom: 20px;">
         <input type="text" id="searchInput" placeholder="Search products..." style="padding: 8px; width: 200px; margin-right: 10px;">
-        <select id="categoryFilter" style="padding: 8px;">
-          <option value="All">All Categories</option>
+        <select id="categoryFilter" style="padding: 8px;"></select>
+        <select id="sortSelect" style="padding: 8px; margin-left: 10px;">
+          <option value="az">Sort A–Z</option>
+          <option value="za">Sort Z–A</option>
         </select>
       </div>
 
+      <div id="tagFilters" style="margin-bottom: 20px;"></div>
       <div id="catalog-sections"></div>
     </main>
   </div>
 
   <script>
     let allProducts = [];
+    let activeTags = new Set();
+    const TAGS = ["Mono", "Color", "Bio", "Mat"];
+
+    function getTags(productName) {
+      return TAGS.filter(tag => productName.toLowerCase().includes(tag.toLowerCase()));
+    }
+
+    function renderTags(container, tags) {
+      const tagDiv = document.createElement('div');
+      tagDiv.className = 'tag-list';
+      tags.forEach(tag => {
+        const span = document.createElement('span');
+        span.className = 'tag';
+        span.textContent = tag;
+        tagDiv.appendChild(span);
+      });
+      container.appendChild(tagDiv);
+    }
+
+    function renderTagFilters() {
+      const container = document.getElementById('tagFilters');
+      container.innerHTML = '';
+      TAGS.forEach(tag => {
+        const btn = document.createElement('button');
+        btn.textContent = tag;
+        btn.className = 'tag-filter';
+        btn.onclick = () => {
+          if (activeTags.has(tag)) {
+            activeTags.delete(tag);
+            btn.classList.remove('active');
+          } else {
+            activeTags.add(tag);
+            btn.classList.add('active');
+          }
+          filterProducts();
+        };
+        container.appendChild(btn);
+      });
+    }
 
     function renderCatalog(filteredProducts) {
       const container = document.getElementById('catalog-sections');
@@ -66,11 +108,13 @@
         items.forEach(product => {
           const card = document.createElement('div');
           card.className = 'product-card';
+          const tags = getTags(product.name);
           card.innerHTML = `
             <img src="${product.thumbnail}" style="width:100%;border-radius:4px;margin-bottom:10px;">
             <h4>${product.name}</h4>
             <a href="${product.pdf}" target="_blank">View PDF</a>
           `;
+          renderTags(card, tags);
           grid.appendChild(card);
         });
 
@@ -84,10 +128,24 @@
     function filterProducts() {
       const searchText = document.getElementById('searchInput').value.toLowerCase();
       const selectedCategory = document.getElementById('categoryFilter').value;
-      const filtered = allProducts.filter(p =>
-        (selectedCategory === 'All' || p.category === selectedCategory) &&
-        p.name.toLowerCase().includes(searchText)
-      );
+      const sortValue = document.getElementById('sortSelect').value;
+
+      let filtered = allProducts.filter(p => {
+        const tags = getTags(p.name);
+        const tagMatch = activeTags.size === 0 || tags.some(tag => activeTags.has(tag));
+        return (
+          (selectedCategory === 'All' || p.category === selectedCategory) &&
+          p.name.toLowerCase().includes(searchText) &&
+          tagMatch
+        );
+      });
+
+      if (sortValue === 'az') {
+        filtered.sort((a, b) => a.name.localeCompare(b.name));
+      } else if (sortValue === 'za') {
+        filtered.sort((a, b) => b.name.localeCompare(a.name));
+      }
+
       renderCatalog(filtered);
     }
 
@@ -96,8 +154,10 @@
         .then(res => res.json())
         .then(products => {
           allProducts = products;
+
           const categories = Array.from(new Set(products.map(p => p.category)));
           const filterSelect = document.getElementById('categoryFilter');
+          filterSelect.innerHTML = '<option value="All">All Categories</option>';
           categories.forEach(cat => {
             const option = document.createElement('option');
             option.value = cat;
@@ -107,17 +167,18 @@
 
           document.getElementById('searchInput').addEventListener('input', filterProducts);
           document.getElementById('categoryFilter').addEventListener('change', filterProducts);
+          document.getElementById('sortSelect').addEventListener('change', filterProducts);
 
+          renderTagFilters();
           renderCatalog(products);
         });
 
       document.getElementById('toggleSidebar').addEventListener('click', () => {
         const sidebar = document.getElementById('sidebar');
         const isCollapsed = sidebar.classList.toggle('collapsed');
-        document.getElementById('toggleIcon').src = isCollapsed ? 'static/icons/expand.png' : 'static/icons/collapse.svg';
+        document.getElementById('toggleIcon').src = isCollapsed ? 'static/icons/expand.png' : 'static/icons/collapse.png';
       });
 
-      // Theme toggle logic
       const themeToggle = document.getElementById('themeToggle');
       const themeIcon = document.getElementById('themeIcon');
       const currentTheme = localStorage.getItem('theme') || 'dark';

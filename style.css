@@ -36,7 +36,7 @@ body.light-mode .sidebar {
 
 .sidebar.collapsed #toggleSidebar {
   display: block;
-  margin: 30px auto;
+  margin: 10px auto;
 }
 
 .nav-links a {
@@ -97,4 +97,188 @@ body.light-mode select {
   background: #fff;
   color: black;
   border: 1px solid #999;
+}
+
+
+.tag-filter {
+  display: inline-block;
+  margin: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.tag-filter:hover {
+  background: #444;
+  transform: scale(1.05);
+}
+
+.tag-filter.active {
+  background: #ff9900;
+  color: black;
+  border-color: #ff9900;
+}
+
+.tag {
+  display: inline-block;
+  margin-top: 8px;
+  margin-right: 6px;
+  padding: 3px 8px;
+  font-size: 12px;
+  background: #555;
+  color: white;
+  border-radius: 12px;
+}
+
+body.light-mode .tag-filter {
+  background: #ddd;
+  color: black;
+  border-color: #ccc;
+}
+
+body.light-mode .tag-filter.active {
+  background: #ffa500;
+  color: white;
+  border-color: #ffa500;
+}
+
+body.light-mode .tag {
+  background: #ccc;
+  color: black;
+}
+
+
+.sidebar {
+  width: 250px;
+  background: #1f1f1f;
+  padding: 24px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 0.3s ease;
+}
+
+.sidebar .brand {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.brand h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.brand .product-count {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.toggle-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.toggle-buttons button {
+  background: #2a2a2a;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.toggle-buttons button:hover {
+  background: #3a3a3a;
+}
+
+.toggle-buttons img {
+  width: 24px;
+  height: 24px;
+}
+
+#themeToggle i {
+  font-size: 20px;
+  color: #ffcc00;
+}
+
+body.light-mode #themeToggle i {
+  color: #222;
+}
+
+.nav-links {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-links a {
+  font-size: 16px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background: #2a2a2a;
+}
+
+.nav-links a.active {
+  color: #ff9900;
+  font-weight: bold;
+}
+
+body.light-mode .sidebar {
+  background: #e0e0e0;
+}
+
+body.light-mode .brand .product-count {
+  color: #333;
+}
+
+body.light-mode .nav-links a:hover {
+  background: #d0d0d0;
+}
+
+
+/* Fix justify content so links are not pushed out */
+.sidebar {
+  justify-content: flex-start;
+}
+
+/* Ensure spacing below toggle buttons and before nav links */
+.nav-links {
+  margin-top: 20px;
+}
+
+
+/* Consistent button style in both modes */
+.toggle-buttons button {
+  background: #2a2a2a;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.toggle-buttons button:hover {
+  background: #3a3a3a;
+}
+
+/* Light mode override */
+body.light-mode .toggle-buttons button {
+  background: #ddd;
+}
+
+body.light-mode .toggle-buttons button:hover {
+  background: #ccc;
 }
