@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <title>Quad Dimensions - Catalog</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <div class="container">
@@ -13,8 +14,11 @@
       <div class="brand">
         <h1>Quad Dimensions</h1>
         <p class="product-count">Loading...</p>
-        <button id="toggleSidebar" style="margin-top: 10px; padding: 10px; background: none; border: none;">
-          <img id="toggleIcon" src="static/icons/collapse.svg" alt="Toggle Sidebar" style="width: 60px; height: 60px;" />
+        <button id="toggleSidebar" style="margin-top:10px;padding:5px 10px;">
+          <img id="toggleIcon" src="static/icons/collapse.svg" alt="Toggle Sidebar" style="width: 30px; height: 30px;" />
+        </button>
+        <button id="themeToggle" style="margin-top:10px;padding:5px 10px;width: 30px; height: 30px;">
+          <i class="fas fa-moon" id="themeIcon"></i>
         </button>
       </div>
       <nav class="nav-links">
@@ -65,7 +69,7 @@
           card.innerHTML = `
             <img src="${product.thumbnail}" style="width:100%;border-radius:4px;margin-bottom:10px;">
             <h4>${product.name}</h4>
-            <a href="${product.pdf}" target="_blank">Read More</a>
+            <a href="${product.pdf}" target="_blank">View PDF</a>
           `;
           grid.appendChild(card);
         });
@@ -106,12 +110,27 @@
 
           renderCatalog(products);
         });
-        document.getElementById('toggleSidebar').addEventListener('click', () => {
-  const sidebar = document.getElementById('sidebar');
-  const isCollapsed = sidebar.classList.toggle('collapsed');
-  const icon = document.getElementById('toggleIcon');
-  icon.src = isCollapsed ? 'static/icons/extend.png' : 'static/icons/collapse.svg';
-});
+
+      document.getElementById('toggleSidebar').addEventListener('click', () => {
+        const sidebar = document.getElementById('sidebar');
+        const isCollapsed = sidebar.classList.toggle('collapsed');
+        document.getElementById('toggleIcon').src = isCollapsed ? 'static/icons/expand.png' : 'static/icons/collapse.svg';
+      });
+
+      // Theme toggle logic
+      const themeToggle = document.getElementById('themeToggle');
+      const themeIcon = document.getElementById('themeIcon');
+      const currentTheme = localStorage.getItem('theme') || 'dark';
+      document.body.classList.toggle('light-mode', currentTheme === 'light');
+      themeIcon.classList.toggle('fa-sun', currentTheme === 'light');
+      themeIcon.classList.toggle('fa-moon', currentTheme !== 'light');
+
+      themeToggle.addEventListener('click', () => {
+        const isLight = document.body.classList.toggle('light-mode');
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        themeIcon.classList.toggle('fa-sun', isLight);
+        themeIcon.classList.toggle('fa-moon', !isLight);
+      });
     });
   </script>
 </body>
