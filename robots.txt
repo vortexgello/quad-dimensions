@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://quadd.in/sitemap.xml
