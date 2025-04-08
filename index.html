@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,11 +8,14 @@
 </head>
 <body>
   <div class="container">
-    <!-- Sidebar without upload -->
-    <aside class="sidebar">
+    <!-- Sidebar with collapse button -->
+    <aside class="sidebar" id="sidebar">
       <div class="brand">
         <h1>Quad Dimensions</h1>
         <p class="product-count">Loading...</p>
+        <button id="toggleSidebar" style="margin-top: 10px; padding: 10px; background: none; border: none;">
+          <img id="toggleIcon" src="static/icons/collapse.svg" alt="Toggle Sidebar" style="width: 60px; height: 60px;" />
+        </button>
       </div>
       <nav class="nav-links">
         <a href="index.html" class="active">Catalog</a>
@@ -22,47 +26,92 @@
     <!-- Main product display -->
     <main class="main-content">
       <h2>Catalog</h2>
+
+      <div style="margin-bottom: 20px;">
+        <input type="text" id="searchInput" placeholder="Search products..." style="padding: 8px; width: 200px; margin-right: 10px;">
+        <select id="categoryFilter" style="padding: 8px;">
+          <option value="All">All Categories</option>
+        </select>
+      </div>
+
       <div id="catalog-sections"></div>
     </main>
   </div>
 
   <script>
+    let allProducts = [];
+
+    function renderCatalog(filteredProducts) {
+      const container = document.getElementById('catalog-sections');
+      container.innerHTML = '';
+
+      const grouped = {};
+      filteredProducts.forEach(p => {
+        if (!grouped[p.category]) grouped[p.category] = [];
+        grouped[p.category].push(p);
+      });
+
+      for (const [category, items] of Object.entries(grouped)) {
+        const section = document.createElement('section');
+        section.className = 'catalog-section';
+        section.innerHTML = '<h3>' + category + '</h3>';
+
+        const grid = document.createElement('div');
+        grid.className = 'product-grid';
+
+        items.forEach(product => {
+          const card = document.createElement('div');
+          card.className = 'product-card';
+          card.innerHTML = `
+            <img src="${product.thumbnail}" style="width:100%;border-radius:4px;margin-bottom:10px;">
+            <h4>${product.name}</h4>
+            <a href="${product.pdf}" target="_blank">Read More</a>
+          `;
+          grid.appendChild(card);
+        });
+
+        section.appendChild(grid);
+        container.appendChild(section);
+      }
+
+      document.querySelector('.product-count').textContent = filteredProducts.length + " products";
+    }
+
+    function filterProducts() {
+      const searchText = document.getElementById('searchInput').value.toLowerCase();
+      const selectedCategory = document.getElementById('categoryFilter').value;
+      const filtered = allProducts.filter(p =>
+        (selectedCategory === 'All' || p.category === selectedCategory) &&
+        p.name.toLowerCase().includes(searchText)
+      );
+      renderCatalog(filtered);
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
       fetch("products.json")
         .then(res => res.json())
         .then(products => {
-          const container = document.getElementById('catalog-sections');
-          const grouped = {};
-          products.forEach(p => {
-            if (!grouped[p.category]) grouped[p.category] = [];
-            grouped[p.category].push(p);
+          allProducts = products;
+          const categories = Array.from(new Set(products.map(p => p.category)));
+          const filterSelect = document.getElementById('categoryFilter');
+          categories.forEach(cat => {
+            const option = document.createElement('option');
+            option.value = cat;
+            option.textContent = cat;
+            filterSelect.appendChild(option);
           });
 
-          for (const [category, items] of Object.entries(grouped)) {
-            const section = document.createElement('section');
-            section.className = 'catalog-section';
-            section.innerHTML = '<h3>' + category + '</h3>';
+          document.getElementById('searchInput').addEventListener('input', filterProducts);
+          document.getElementById('categoryFilter').addEventListener('change', filterProducts);
 
-            const grid = document.createElement('div');
-            grid.className = 'product-grid';
-
-            items.forEach(product => {
-              const card = document.createElement('div');
-              card.className = 'product-card';
-              card.innerHTML = `
-                <img src="${product.thumbnail}" style="width:100%;border-radius:4px;margin-bottom:10px;">
-                <h4>${product.name}</h4>
-                <a href="${product.pdf}" target="_blank">View PDF</a>
-              `;
-              grid.appendChild(card);
-            });
-
-            section.appendChild(grid);
-            container.appendChild(section);
-          }
-
-          document.querySelector('.product-count').textContent = products.length + " products";
+          renderCatalog(products);
         });
+        document.getElementById('toggleSidebar').addEventListener('click', () => {
+  const sidebar = document.getElementById('sidebar');
+  const isCollapsed = sidebar.classList.toggle('collapsed');
+  const icon = document.getElementById('toggleIcon');
+  icon.src = isCollapsed ? 'static/icons/extend.png' : 'static/icons/collapse.svg';
+});
     });
   </script>
 </body>
