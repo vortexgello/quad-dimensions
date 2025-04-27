@@ -116,5 +116,5 @@ app.py              # Flask backend server
 
 ## 👨‍💻 Author
 
-Built with ❤️ by [Your Name]
+Built with ❤️ by vortex
 
