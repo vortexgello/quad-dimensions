@@ -3,26 +3,25 @@
     "name": "Axio Zoom V16 Bio",
     "category": "Microscopes",
     "thumbnail": "/static/thumbnails/axio-zoom-v16_bio.jpg",
-    "pdf":"/static/pdfs/axio_zoom_v16_bio.pdf"
+    "pdf": "/static/pdfs/axio_zoom_v16_bio.pdf"
   },
   {
     "name": "Axio Zoom V16 Mat",
     "category": "Microscopes",
     "thumbnail": "/static/thumbnails/axio-zoom-v16_mat.jpg",
-    "pdf":"/static/pdfs/axio_zoom_v16_mat.pdf"
+    "pdf": "/static/pdfs/axio_zoom_v16_mat.pdf"
   },
   {
     "name": "Axiocam 807 Mono",
     "category": "Cameras",
     "thumbnail": "/static/thumbnails/axiocam_807_mono.jpg",
-    "pdf":"/static/pdfs/axiocam_807_mono.pdf"
-    
+    "pdf": "/static/pdfs/axiocam_807_mono.pdf"
   },
   {
     "name": "Axiocam 820 Color",
     "category": "Cameras",
     "thumbnail": "/static/thumbnails/axiocam_820_color.jpg",
-    "pdf":"/static/pdfs/axiocam_820_color.pdf"
+    "pdf": "/static/pdfs/axiocam_820_color.pdf"
   },
   {
     "name": "Axiocam 105 Color",
@@ -203,7 +202,6 @@
     "category": "Microscopes",
     "thumbnail": "/static/thumbnails/axio-zoom-v16_bio.jpg",
     "pdf": "/static/pdfs/axio_zoom_v16_bio.pdf"
-
   },
   {
     "name": "Axio Zoom V16 Mat",
