@@ -30,18 +30,6 @@
     "thumbnail": "/static/thumbnails/axiocam-105-color_stage.jpg"
   },
   {
-    "name": "Axiocam 202 Mono",
-    "category": "Cameras",
-    "thumbnail": "/static/thumbnails/axiocam_202_mono.jpg",
-    "pdf": "/static/pdfs/axiocam_202_mono.pdf"
-  },
-  {
-    "name": "Axiocam 208 Color",
-    "category": "Cameras",
-    "thumbnail": "/static/thumbnails/axiocam_208_color.jpg",
-    "pdf": "/static/pdfs/axiocam_208_color.pdf"
-  },
-  {
     "name": "Axiocam 305 Color",
     "category": "Cameras",
     "thumbnail": "/static/thumbnails/axiocam_305_color.jpg",
